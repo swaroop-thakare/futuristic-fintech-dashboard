@@ -421,30 +421,28 @@ export default function ArealisGatewayDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6">
+    <div className="min-h-screen bg-background cyber-grid p-6">
       {/* Header */}
       <div className="mb-8">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-amber-400 bg-clip-text text-transparent">
-              Arealis Gateway
-            </h1>
-            <p className="text-slate-300 mt-2">Enterprise Payment Orchestration Platform</p>
+            <h1 className="text-4xl font-bold text-balance text-primary">Arealis Gateway</h1>
+            <p className="text-muted-foreground mt-2">Enterprise Payment Orchestration Platform</p>
           </div>
           <div className="flex items-center gap-4">
-            <Badge variant="outline" className="bg-slate-800/50 backdrop-blur-sm border-purple-500/30">
+            <Badge variant="outline" className="glass-panel cy-glow neon-border">
               <Activity className="w-4 h-4 mr-2" />
               Live Processing
             </Badge>
-            <Badge variant="outline" className="bg-slate-800/50 backdrop-blur-sm border-purple-500/30">
+            <Badge variant="outline" className="glass-panel cy-glow neon-border">
               <Shield className="w-4 h-4 mr-2" />
               PCI Level 1
             </Badge>
-            <Badge variant="outline" className="bg-slate-800/50 backdrop-blur-sm border-purple-500/30">
+            <Badge variant="outline" className="glass-panel cy-glow">
               <Brain className="w-4 h-4 mr-2" />
               AI Powered
             </Badge>
-            <Button variant="outline" onClick={() => setShowOnboarding(true)}>
+            <Button variant="outline" onClick={() => setShowOnboarding(true)} className="neon-border">
               <Settings className="w-4 h-4 mr-2" />
               Setup
             </Button>
@@ -452,11 +450,11 @@ export default function ArealisGatewayDashboard() {
         </div>
       </div>
 
-      <Card className="mb-8 bg-gradient-to-r from-primary/10 to-accent/10 border-primary/20">
+      <Card className="mb-8 glass-panel cy-glow">
         <CardContent className="p-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-primary/15 rounded-lg flex items-center justify-center">
                 <Layers className="w-6 h-6 text-primary" />
               </div>
               <div>
@@ -485,8 +483,9 @@ export default function ArealisGatewayDashboard() {
         </CardContent>
       </Card>
 
+      {/* Tabs */}
       <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-8">
-        <TabsList className="grid w-full grid-cols-8 bg-card/60 backdrop-blur-sm">
+        <TabsList className="grid w-full grid-cols-8 glass-panel">
           <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
           <TabsTrigger value="batch">Batch Upload</TabsTrigger>
           <TabsTrigger value="orchestration">Orchestration</TabsTrigger>
@@ -1319,144 +1318,124 @@ export default function ArealisGatewayDashboard() {
         <TabsContent value="payments">
           <div className="space-y-8">
             {/* Futuristic Payment Header */}
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500/20 via-amber-500/10 to-slate-900 border border-purple-500/30">
-              <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
+            <div className="relative overflow-hidden rounded-2xl glass-panel cy-glow">
               <div className="relative p-8">
                 <div className="flex items-center justify-between mb-6">
                   <div>
-                    <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-amber-400 bg-clip-text text-transparent">
-                      Payment Processing Center
-                    </h2>
-                    <p className="text-slate-300 mt-2">Advanced payment orchestration with AI-powered routing</p>
+                    <h2 className="text-3xl font-bold text-primary text-balance">Payment Processing Center</h2>
+                    <p className="text-muted-foreground mt-2">Advanced payment orchestration with AI-powered routing</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <div
-                      className={`w-4 h-4 rounded-full ${pulseAnimation ? "animate-pulse bg-emerald-400" : "bg-emerald-400/50"}`}
+                      className={`w-4 h-4 rounded-full ${pulseAnimation ? "animate-pulse bg-chart-3" : "bg-chart-3/60"}`}
                     />
-                    <span className="text-sm text-slate-300">Live Processing</span>
+                    <span className="text-sm text-muted-foreground">Live Processing</span>
                   </div>
                 </div>
 
                 {/* Real-time Stats */}
                 <div className="grid grid-cols-4 gap-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-purple-400">₹24.8M</div>
-                    <div className="text-xs text-slate-400">Today's Volume</div>
+                    <div className="text-2xl font-bold text-primary">₹24.8M</div>
+                    <div className="text-xs text-muted-foreground">Today's Volume</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-emerald-400">99.8%</div>
-                    <div className="text-xs text-slate-400">Success Rate</div>
+                    <div className="text-2xl font-bold text-chart-3">99.8%</div>
+                    <div className="text-xs text-muted-foreground">Success Rate</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-amber-400">0.8s</div>
-                    <div className="text-xs text-slate-400">Avg Response</div>
+                    <div className="text-2xl font-bold text-accent">0.8s</div>
+                    <div className="text-xs text-muted-foreground">Avg Response</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400">24/7</div>
-                    <div className="text-xs text-slate-400">Uptime</div>
+                    <div className="text-2xl font-bold text-primary">24/7</div>
+                    <div className="text-xs text-muted-foreground">Uptime</div>
                   </div>
                 </div>
+
+                {/* subtle scan sweep */}
+                <div className="cy-scan pointer-events-none absolute inset-0" aria-hidden />
               </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Payment Creation Interface */}
-              <Card className="bg-slate-800/60 backdrop-blur-sm border-purple-500/30 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-amber-500/5" />
+              <Card className="glass-panel relative overflow-hidden">
                 <CardHeader className="relative">
-                  <CardTitle className="flex items-center gap-2 text-slate-100">
-                    <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                      <Zap className="w-4 h-4 text-purple-400" />
+                  <CardTitle className="flex items-center gap-2">
+                    <div className="w-8 h-8 bg-primary/15 rounded-lg flex items-center justify-center">
+                      <Zap className="w-4 h-4 text-primary" />
                     </div>
                     Create Payment
                   </CardTitle>
-                  <CardDescription className="text-slate-300">
-                    Initiate secure payment with AI-powered routing
-                  </CardDescription>
+                  <CardDescription>Initiate secure payment with AI-powered routing</CardDescription>
                 </CardHeader>
                 <CardContent className="relative space-y-6">
                   {/* Payment Amount */}
                   <div className="space-y-2">
-                    <Label className="text-slate-200">Amount</Label>
+                    <Label>Amount</Label>
                     <div className="relative">
                       <Input
                         type="number"
                         placeholder="0.00"
                         value={paymentForm.amount}
                         onChange={(e) => setPaymentForm({ ...paymentForm, amount: e.target.value })}
-                        className="text-2xl font-bold h-16 pl-12 bg-slate-800/80 backdrop-blur-sm border-purple-500/20 text-slate-100"
+                        className="text-2xl font-bold h-16 pl-12"
                       />
-                      <div className="absolute left-4 top-1/2 -translate-y-1/2 text-xl font-bold text-slate-400">₹</div>
+                      <div className="absolute left-4 top-1/2 -translate-y-1/2 text-xl font-bold text-muted-foreground">
+                        ₹
+                      </div>
                     </div>
                   </div>
 
                   {/* Customer Email */}
                   <div className="space-y-2">
-                    <Label className="text-slate-200">Customer Email</Label>
+                    <Label>Customer Email</Label>
                     <Input
                       type="email"
                       placeholder="customer@example.com"
                       value={paymentForm.customer_email}
                       onChange={(e) => setPaymentForm({ ...paymentForm, customer_email: e.target.value })}
-                      className="bg-slate-800/80 backdrop-blur-sm border-purple-500/20 text-slate-100"
                     />
                   </div>
 
                   {/* Payment Method Selection */}
                   <div className="space-y-4">
-                    <Label className="text-slate-200">Payment Method</Label>
+                    <Label>Payment Method</Label>
                     <div className="grid grid-cols-2 gap-3">
                       {paymentMethods.slice(0, 8).map((method) => (
                         <Card
                           key={method.id}
                           className={`cursor-pointer transition-all duration-300 hover:scale-105 ${
-                            selectedPaymentMethod === method.id
-                              ? "border-purple-400 bg-purple-500/10 shadow-lg shadow-purple-500/20"
-                              : "border-slate-600/50 hover:border-purple-500/50 bg-slate-800/40"
+                            selectedPaymentMethod === method.id ? "neon-border bg-primary/5" : "glass-panel"
                           }`}
                           onClick={() => setSelectedPaymentMethod(method.id)}
                         >
                           <CardContent className="p-4 text-center">
                             <method.icon
                               className={`w-8 h-8 mx-auto mb-2 ${
-                                selectedPaymentMethod === method.id ? "text-purple-400" : "text-slate-400"
+                                selectedPaymentMethod === method.id ? "text-primary" : "text-muted-foreground"
                               }`}
                             />
-                            <div
-                              className={`font-medium text-sm ${selectedPaymentMethod === method.id ? "text-slate-100" : "text-slate-300"}`}
-                            >
-                              {method.name}
-                            </div>
-                            <div className="text-xs text-slate-400">{method.fee} fee</div>
+                            <div className={`font-medium text-sm`}>{method.name}</div>
+                            <div className="text-xs text-muted-foreground">{method.fee} fee</div>
                           </CardContent>
                         </Card>
                       ))}
                     </div>
                   </div>
 
-                  {/* Description */}
-                  <div className="space-y-2">
-                    <Label className="text-slate-200">Description</Label>
-                    <Input
-                      placeholder="Payment description"
-                      value={paymentForm.description}
-                      onChange={(e) => setPaymentForm({ ...paymentForm, description: e.target.value })}
-                      className="bg-slate-800/80 backdrop-blur-sm border-purple-500/20 text-slate-100"
-                    />
-                  </div>
-
-                  {/* Security Scan Animation */}
                   {showSecurityScan && (
-                    <div className="absolute inset-0 bg-slate-800/95 backdrop-blur-sm flex items-center justify-center">
+                    <div className="absolute inset-0 bg-background/85 backdrop-blur-sm flex items-center justify-center">
                       <div className="text-center space-y-4">
                         <div className="w-16 h-16 mx-auto relative">
-                          <div className="absolute inset-0 border-4 border-purple-500/20 rounded-full"></div>
-                          <div className="absolute inset-0 border-4 border-purple-400 border-t-transparent rounded-full animate-spin"></div>
-                          <Shield className="w-8 h-8 text-purple-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+                          <div className="absolute inset-0 border-4 border-primary/15 rounded-full" />
+                          <div className="absolute inset-0 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+                          <Shield className="w-8 h-8 text-primary absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
                         </div>
                         <div>
-                          <div className="font-medium text-slate-100">Security Scan in Progress</div>
-                          <div className="text-sm text-slate-300">Verifying transaction integrity...</div>
+                          <div className="font-medium">Security Scan in Progress</div>
+                          <div className="text-sm text-muted-foreground">Verifying transaction integrity...</div>
                         </div>
                       </div>
                     </div>
@@ -1464,20 +1443,20 @@ export default function ArealisGatewayDashboard() {
 
                   {/* Dual Key Animation */}
                   {showDualKeyAnimation && (
-                    <div className="absolute inset-0 bg-slate-800/95 backdrop-blur-sm flex items-center justify-center">
+                    <div className="absolute inset-0 bg-background/85 backdrop-blur-sm flex items-center justify-center">
                       <div className="text-center space-y-4">
                         <div className="flex items-center justify-center gap-4">
-                          <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center animate-pulse">
-                            <Key className="w-6 h-6 text-purple-400 transform -rotate-45" />
+                          <div className="w-12 h-12 bg-primary/15 rounded-lg flex items-center justify-center animate-pulse">
+                            <Key className="w-6 h-6 text-primary -rotate-45" />
                           </div>
-                          <div className="w-8 h-0.5 bg-gradient-to-r from-purple-400 to-amber-400 animate-pulse"></div>
-                          <div className="w-12 h-12 bg-amber-500/20 rounded-lg flex items-center justify-center animate-pulse">
-                            <Key className="w-6 h-6 text-amber-400 transform rotate-45" />
+                          <div className="w-8 h-0.5 bg-primary/70 animate-pulse rounded-full" />
+                          <div className="w-12 h-12 bg-accent/15 rounded-lg flex items-center justify-center animate-pulse">
+                            <Key className="w-6 h-6 text-accent rotate-45" />
                           </div>
                         </div>
                         <div>
-                          <div className="font-medium text-slate-100">Dual-Key Signing</div>
-                          <div className="text-sm text-slate-300">Cryptographic validation in progress...</div>
+                          <div className="font-medium">Dual-Key Signing</div>
+                          <div className="text-sm text-muted-foreground">Cryptographic validation in progress...</div>
                         </div>
                       </div>
                     </div>
@@ -1485,14 +1464,14 @@ export default function ArealisGatewayDashboard() {
 
                   {/* Success Animation */}
                   {paymentSuccess && (
-                    <div className="absolute inset-0 bg-slate-800/95 backdrop-blur-sm flex items-center justify-center">
+                    <div className="absolute inset-0 bg-background/85 backdrop-blur-sm flex items-center justify-center">
                       <div className="text-center space-y-4">
-                        <div className="w-16 h-16 mx-auto bg-emerald-500/20 rounded-full flex items-center justify-center">
-                          <CheckCircle className="w-8 h-8 text-emerald-400" />
+                        <div className="w-16 h-16 mx-auto bg-chart-3/20 rounded-full flex items-center justify-center">
+                          <CheckCircle className="w-8 h-8 text-chart-3" />
                         </div>
                         <div>
-                          <div className="font-medium text-emerald-400">Payment Successful</div>
-                          <div className="text-sm text-slate-300">Transaction processed securely</div>
+                          <div className="font-medium text-chart-3">Payment Successful</div>
+                          <div className="text-sm text-muted-foreground">Transaction processed securely</div>
                         </div>
                       </div>
                     </div>
@@ -1500,7 +1479,7 @@ export default function ArealisGatewayDashboard() {
 
                   <Button
                     onClick={handleCreatePayment}
-                    className="w-full h-12 text-lg font-medium bg-gradient-to-r from-purple-500 to-amber-500 hover:from-purple-600 hover:to-amber-600 transition-all duration-300 text-white"
+                    className="w-full h-12 text-lg font-medium bg-primary text-primary-foreground hover:bg-primary/90"
                     disabled={processingPayment || !paymentForm.amount || !selectedPaymentMethod}
                   >
                     {processingPayment ? (
@@ -1519,49 +1498,47 @@ export default function ArealisGatewayDashboard() {
               </Card>
 
               {/* Live Transaction Monitor */}
-              <Card className="bg-slate-800/60 backdrop-blur-sm border-purple-500/30">
+              <Card className="glass-panel">
                 <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-slate-100">
+                  <CardTitle className="flex items-center gap-2">
                     <Activity className="w-5 h-5" />
                     Live Transaction Monitor
                   </CardTitle>
-                  <CardDescription className="text-slate-300">
-                    Real-time payment processing visualization
-                  </CardDescription>
+                  <CardDescription>Real-time payment processing visualization</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {recentTransactions.map((txn, index) => (
+                    {recentTransactions.map((txn) => (
                       <div
                         key={txn.id}
-                        className="flex items-center justify-between p-4 border border-slate-600/50 rounded-lg bg-slate-800/40 hover:bg-slate-700/60 transition-colors"
+                        className="flex items-center justify-between p-4 border rounded-lg bg-card/40 hover:bg-card/60 transition-colors"
                       >
                         <div className="flex items-center gap-3">
                           <div
                             className={`w-10 h-10 rounded-lg flex items-center justify-center ${
                               txn.status === "success"
-                                ? "bg-emerald-500/20"
+                                ? "bg-chart-3/25"
                                 : txn.status === "failed"
-                                  ? "bg-red-500/20"
-                                  : "bg-amber-500/20"
+                                  ? "bg-destructive/20"
+                                  : "bg-accent/20"
                             }`}
                           >
                             {txn.status === "success" ? (
-                              <CheckCircle className="w-5 h-5 text-emerald-400" />
+                              <CheckCircle className="w-5 h-5 text-chart-3" />
                             ) : txn.status === "failed" ? (
-                              <X className="w-5 h-5 text-red-400" />
+                              <X className="w-5 h-5 text-destructive" />
                             ) : (
-                              <Clock className="w-5 h-5 text-amber-400" />
+                              <Clock className="w-5 h-5 text-accent" />
                             )}
                           </div>
                           <div>
-                            <div className="font-medium text-slate-100">{txn.id}</div>
-                            <div className="text-sm text-slate-400">{txn.customer}</div>
+                            <div className="font-medium">{txn.id}</div>
+                            <div className="text-sm text-muted-foreground">{txn.customer}</div>
                           </div>
                         </div>
                         <div className="text-right">
-                          <div className="font-bold text-slate-100">₹{txn.amount.toLocaleString()}</div>
-                          <div className="text-sm text-slate-400">
+                          <div className="font-bold">₹{txn.amount.toLocaleString()}</div>
+                          <div className="text-sm text-muted-foreground">
                             {txn.method} • {txn.time}
                           </div>
                         </div>
@@ -1573,15 +1550,13 @@ export default function ArealisGatewayDashboard() {
             </div>
 
             {/* Payment Methods Configuration */}
-            <Card className="bg-slate-800/60 backdrop-blur-sm border-purple-500/30">
+            <Card className="glass-panel">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-slate-100">
+                <CardTitle className="flex items-center gap-2">
                   <Settings className="w-5 h-5" />
                   Payment Methods Configuration
                 </CardTitle>
-                <CardDescription className="text-slate-300">
-                  Configure and manage payment methods with real-time analytics
-                </CardDescription>
+                <CardDescription>Configure and manage payment methods with real-time analytics</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1589,9 +1564,7 @@ export default function ArealisGatewayDashboard() {
                     <Card
                       key={method.id}
                       className={`transition-all duration-300 hover:scale-105 ${
-                        method.enabled
-                          ? "border-emerald-500/50 bg-emerald-500/5"
-                          : "border-slate-600/50 bg-slate-800/40"
+                        method.enabled ? "neon-border bg-primary/3" : "glass-panel"
                       }`}
                     >
                       <CardContent className="p-6">
@@ -1599,16 +1572,16 @@ export default function ArealisGatewayDashboard() {
                           <div className="flex items-center gap-3">
                             <div
                               className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                                method.enabled ? "bg-emerald-500/20" : "bg-slate-700/20"
+                                method.enabled ? "bg-primary/10" : "bg-muted/40"
                               }`}
                             >
                               <method.icon
-                                className={`w-6 h-6 ${method.enabled ? "text-emerald-400" : "text-slate-400"}`}
+                                className={`w-6 h-6 ${method.enabled ? "text-primary" : "text-muted-foreground"}`}
                               />
                             </div>
                             <div>
-                              <div className="font-medium text-slate-100">{method.name}</div>
-                              <div className="text-sm text-slate-400">Fee: {method.fee}</div>
+                              <div className="font-medium">{method.name}</div>
+                              <div className="text-sm text-muted-foreground">Fee: {method.fee}</div>
                             </div>
                           </div>
                           <Badge variant={method.enabled ? "default" : "secondary"}>
@@ -1619,14 +1592,12 @@ export default function ArealisGatewayDashboard() {
                         {method.enabled && (
                           <div className="space-y-3">
                             <div className="flex justify-between text-sm">
-                              <span className="text-slate-400">Success Rate</span>
-                              <span className="font-medium text-slate-100">98.{Math.floor(Math.random() * 9)}%</span>
+                              <span className="text-muted-foreground">Success Rate</span>
+                              <span className="font-medium text-chart-3">98.{Math.floor(Math.random() * 9)}%</span>
                             </div>
                             <div className="flex justify-between text-sm">
-                              <span className="text-slate-400">Avg Response</span>
-                              <span className="font-medium text-slate-100">
-                                {Math.floor(Math.random() * 500 + 200)}ms
-                              </span>
+                              <span className="text-muted-foreground">Avg Response</span>
+                              <span className="font-medium">{Math.floor(Math.random() * 500 + 200)}ms</span>
                             </div>
                             <Progress value={Math.floor(Math.random() * 30 + 70)} className="h-2" />
                           </div>

@@ -11,20 +11,20 @@
   --card-foreground: oklch(0.3 0.02 240); /* Dark blue-gray card text */
   --popover: oklch(1 0 0 / 0.95); /* More opaque white popovers */
   --popover-foreground: oklch(0.3 0.02 240); /* Dark blue-gray popover text */
-  --primary: oklch(0.55 0.15 180); /* Cyan-blue primary for tech feel */
+  --primary: oklch(0.6 0.22 300); /* Purple primary */
   --primary-foreground: oklch(0.98 0 0); /* White text on primary */
   --secondary: oklch(0.6 0.12 200); /* Light blue secondary */
   --secondary-foreground: oklch(0.98 0 0); /* White text on secondary */
   --muted: oklch(0.94 0.01 240); /* Very light blue-gray muted */
   --muted-foreground: oklch(0.5 0.02 240); /* Medium blue-gray muted text */
-  --accent: oklch(0.65 0.18 160); /* Bright cyan accent for data pulses */
+  --accent: oklch(0.6 0.22 300); /* Align accent to purple for consistency */
   --accent-foreground: oklch(0.98 0 0); /* White text on accent */
   --destructive: oklch(0.6 0.2 25); /* Red for alerts */
   --destructive-foreground: oklch(0.98 0 0); /* White text on destructive */
   --border: oklch(0.85 0.01 240); /* Light blue-gray borders */
   --input: oklch(1 0 0 / 0.9); /* Semi-transparent white inputs */
-  --ring: oklch(0.55 0.15 180 / 0.3); /* Subtle cyan focus ring */
-  --chart-1: oklch(0.55 0.15 180); /* Primary cyan for charts */
+  --ring: oklch(0.6 0.22 300 / 0.3); /* Purple focus ring */
+  --chart-1: oklch(0.6 0.22 300); /* Primary chart color now purple */
   --chart-2: oklch(0.65 0.18 160); /* Bright cyan for secondary data */
   --chart-3: oklch(0.7 0.12 140); /* Green-cyan for success states */
   --chart-4: oklch(0.6 0.2 25); /* Red for alerts in charts */
@@ -32,12 +32,12 @@
   --radius: 0.75rem; /* Larger radius for modern glass effect */
   --sidebar: oklch(1 0 0 / 0.85); /* Semi-transparent sidebar */
   --sidebar-foreground: oklch(0.3 0.02 240); /* Dark blue-gray sidebar text */
-  --sidebar-primary: oklch(0.55 0.15 180); /* Primary cyan for sidebar highlights */
+  --sidebar-primary: oklch(0.6 0.22 300); /* Sidebar highlight purple */
   --sidebar-primary-foreground: oklch(0.98 0 0); /* White text on primary sidebar */
-  --sidebar-accent: oklch(0.65 0.18 160); /* Accent cyan for sidebar elements */
+  --sidebar-accent: oklch(0.6 0.22 300); /* Sidebar accent purple */
   --sidebar-accent-foreground: oklch(0.98 0 0); /* White text on accent sidebar */
   --sidebar-border: oklch(0.85 0.01 240); /* Light blue-gray sidebar borders */
-  --sidebar-ring: oklch(0.55 0.15 180 / 0.3); /* Subtle focus ring for sidebar */
+  --sidebar-ring: oklch(0.6 0.22 300 / 0.3); /* Subtle focus ring for sidebar */
 }
 
 .dark {
@@ -48,32 +48,32 @@
   --card-foreground: oklch(0.9 0.01 240); /* Light text on dark cards */
   --popover: oklch(0.15 0.02 240 / 0.95); /* Dark blue popovers */
   --popover-foreground: oklch(0.9 0.01 240); /* Light popover text */
-  --primary: oklch(0.65 0.18 180); /* Brighter cyan primary for dark mode */
+  --primary: oklch(0.7 0.25 300); /* Brighter purple for dark mode */
   --primary-foreground: oklch(0.05 0.02 240); /* Very dark text on primary */
   --secondary: oklch(0.25 0.03 240); /* Dark blue secondary */
   --secondary-foreground: oklch(0.9 0.01 240); /* Light text on secondary */
   --muted: oklch(0.2 0.02 240); /* Dark blue-gray muted */
   --muted-foreground: oklch(0.6 0.01 240); /* Medium light muted text */
-  --accent: oklch(0.7 0.2 160); /* Bright glowing cyan accent */
+  --accent: oklch(0.7 0.25 300); /* Purple accent for dark mode */
   --accent-foreground: oklch(0.05 0.02 240); /* Very dark text on accent */
   --destructive: oklch(0.65 0.25 25); /* Bright red for dark mode alerts */
   --destructive-foreground: oklch(0.05 0.02 240); /* Dark text on destructive */
   --border: oklch(0.25 0.02 240); /* Dark blue borders */
   --input: oklch(0.15 0.02 240 / 0.9); /* Semi-transparent dark inputs */
-  --ring: oklch(0.65 0.18 180 / 0.4); /* Glowing cyan focus ring */
-  --chart-1: oklch(0.65 0.18 180); /* Bright cyan for charts */
+  --ring: oklch(0.7 0.25 300 / 0.4); /* Purple glow ring */
+  --chart-1: oklch(0.7 0.25 300); /* Chart primary purple */
   --chart-2: oklch(0.7 0.2 160); /* Glowing cyan for secondary data */
   --chart-3: oklch(0.75 0.15 140); /* Bright green-cyan for success */
   --chart-4: oklch(0.65 0.25 25); /* Bright red for alerts */
   --chart-5: oklch(0.7 0.18 60); /* Bright yellow-green for warnings */
   --sidebar: oklch(0.1 0.02 240 / 0.9); /* Semi-transparent dark sidebar */
   --sidebar-foreground: oklch(0.9 0.01 240); /* Light sidebar text */
-  --sidebar-primary: oklch(0.65 0.18 180); /* Bright cyan sidebar primary */
+  --sidebar-primary: oklch(0.7 0.25 300); /* Bright purple sidebar primary */
   --sidebar-primary-foreground: oklch(0.05 0.02 240); /* Dark text on primary */
-  --sidebar-accent: oklch(0.7 0.2 160); /* Glowing accent for sidebar */
+  --sidebar-accent: oklch(0.7 0.25 300); /* Purple accent for sidebar */
   --sidebar-accent-foreground: oklch(0.05 0.02 240); /* Dark text on accent */
   --sidebar-border: oklch(0.25 0.02 240); /* Dark blue sidebar borders */
-  --sidebar-ring: oklch(0.65 0.18 180 / 0.4); /* Glowing focus ring */
+  --sidebar-ring: oklch(0.7 0.25 300 / 0.4); /* Glowing focus ring */
 }
 
 @theme inline {
@@ -122,4 +122,119 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer components {
+  .glass-panel {
+    background: color-mix(in oklch, var(--card) 100%, transparent);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    backdrop-filter: saturate(120%) blur(12px);
+  }
+  .cy-glow {
+    box-shadow: 0 0 0 1px color-mix(in oklch, var(--color-primary) 35%, transparent), 0 8px 20px -6px
+      color-mix(in oklch, var(--color-primary) 20%, transparent);
+  }
+
+  /* add subtle cyber grid background and neon-border utility */
+  .cyber-grid {
+    position: relative;
+  }
+  .cyber-grid::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+        to right,
+        color-mix(in oklch, var(--color-primary) 9%, transparent) 1px,
+        transparent 1px
+      ), linear-gradient(to bottom, color-mix(in oklch, var(--color-primary) 9%, transparent) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse at 50% 30%, black 35%, transparent 70%);
+    pointer-events: none;
+    opacity: 0.35;
+  }
+  .neon-border {
+    box-shadow: 0 0 0 1px color-mix(in oklch, var(--color-primary) 50%, transparent), 0 0 22px
+      color-mix(in oklch, var(--color-primary) 22%, transparent);
+  }
+
+  .bg-glass {
+    background: color-mix(in oklch, var(--card) 92%, transparent);
+    backdrop-filter: saturate(120%) blur(10px);
+    -webkit-backdrop-filter: saturate(120%) blur(10px);
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+}
+.pulse-dot {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+
+@keyframes interlock {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* add glow and scan animations used by checkout */
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklch, var(--color-accent) 30%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 12px transparent;
+  }
+}
+.glow-pulse {
+  animation: glow-pulse 1.6s ease-out infinite;
+}
+
+@keyframes cy-scan {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+.cy-scan {
+  position: relative;
+  overflow: hidden;
+}
+.cy-scan::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklch, var(--color-accent) 15%, transparent),
+    transparent
+  );
+  animation: cy-scan 2.4s ease-in-out infinite;
 }
